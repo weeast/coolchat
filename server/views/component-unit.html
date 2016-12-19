@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>组件单元测试</title><!-- 
+    <script src="http://static.a.carry6.com/libs/jquery/1.11.3.js" type="text/javascript" charset="utf-8"></script> -->
+    <meta name="viewport" content="width=device-width"/>
+    <script type="text/javascript">
+        (function() {
+            var docElement = document.documentElement,
+            metaElement = document.querySelector('meta[name="viewport"]'),
+            styleElement = document.createElement("style"),
+            version,
+            screenScale = 1,
+            originScreenW = 750,
+            originScreenH = 1206,
+            screenW = window.screen.width,
+            screenH = window.screen.height;
+            screenScale = parseInt(screenW) / 750;
+            if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+                version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    metaElement.setAttribute("content", "width=750,height=1206,minimum-scale=" + screenScale + ",maximum-scale=" + screenScale + ",target-densitydpi=device-dpi")
+                } else {
+                    metaElement.setAttribute("content", "width=750,height=1206,target-densitydpi=device-dpi")
+                }
+            } else {
+                metaElement.setAttribute("content", "width=750,height=1206,user-scalable=no,target-densitydpi=device-dpi")
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div id="root">
+        
+    </div>
+</body>
+</html>

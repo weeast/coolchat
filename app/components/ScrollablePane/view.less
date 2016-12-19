@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.ui-scroll-pane{
+	position: relative;
+	overflow: hidden;
+
+	.ui-scroll-slider{
+		position: absolute;
+		.clearfix;
+
+		&.ui-roll-back{
+			.transition;
+		}
+	}
+}

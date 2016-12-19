@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.md-user-head{
+	position: relative;
+
+	.size(100%, 100px);
+	padding: 20px;
+
+	background: @bg-light-blue;
+	border-bottom: 2px solid #fff;
+	.box-shadow(0 2px 6px rgba(0,0,0,0.5));
+
+	.icon-cont{
+		position: absolute;
+		left: 20px;
+		top: 15px;
+
+		display: block;
+		overflow: hidden;
+		.square(70px);
+		.border-radius(50%);
+
+		img{ 
+			width: 75px;
+		}
+	}
+
+	h1{
+		.transition;
+
+		font-weight: 300;
+    	font-size: 36px;
+		font-family: 'Bree Serif', serif;
+
+		color: @text-color;
+		text-align: center;
+		.text-shadow(0px 1px 0 rgba(0,0,0,0.25));
+
+		&.searching{
+			.opacity(0);
+		}
+	}
+
+	.md-userhead-search{
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		z-index: 5;
+	}
+}

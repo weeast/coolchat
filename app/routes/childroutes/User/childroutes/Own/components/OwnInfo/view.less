@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.md-userown-info{
+	display: block;
+	width: 100%;
+
+	.clearfix;
+
+	padding: 20px;
+
+	background: #fefefe;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	.box-shadow(0 2px 6px rgba(0,0,0,0.5));
+
+	.info-col{
+		float: left;
+
+		height: 130px;
+	}
+
+	.icon-warp{
+		.square(130px);
+
+		overflow: hidden;
+
+		.border-radius(50%);
+
+		img{
+			width: 130px;
+		}
+	}
+
+	.detail-warp{
+		width: 500px;
+
+		padding-left: 80px;
+		
+		.name{
+			color: @text-color;
+			font-size: 36px;
+			line-height: 80px;
+
+			.text-overflow;
+		}
+		
+		.mail{
+			color: @text-color-maingray;
+			font-size: 26px;
+			line-height: 50px;
+
+			.text-overflow;
+		}
+	}
+
+	.more{
+		width: 80px;
+
+		line-height: 130px;
+		text-align: center;
+
+		i{
+			color: @text-color-maingray;
+			font-size: 58px;
+		}
+	}
+
+	&:active{
+		background: #f6f6f6;
+	}
+}

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.md-userdetail-icon{
+	position: relative;
+	.square(240px);
+
+	border: 1px solid #fefefe;
+	.box-shadow(0px 1px 6px rgba(0,0,0,0.5));
+
+	overflow: hidden;
+
+	.detail-icon{
+		width: 240px;
+		min-height: 240px;
+	}
+
+	.detail-fileupload{
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+
+		z-index: 50;
+
+		display: inline-block;
+		.size(120px, 30px);
+
+		color: @text-color;
+		font-size: 18px;
+		line-height: 30px;
+		text-align: center;
+		
+		background: #fefefe;
+		.border-radius(5px);
+		.box-shadow(0px 1px 6px rgba(0,0,0,0.5));
+
+		.icon-file{
+			display: none;
+		}
+	}
+
+	&.upload{
+		.square(450px);
+
+		.detail-icon{
+			position: absolute;
+			left: 0;
+			top: 0;
+			
+			width: auto;
+			min-width: 450px;
+			min-height: 450px;
+		}
+	}
+}

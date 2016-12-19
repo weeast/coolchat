@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+@buble-color: #fff;
+.md-channel-bubble{
+	display: inline-block;
+	position: relative;
+	background-color: @buble-color;
+	padding: 10px 20px;
+	min-width: 50px;
+	min-height: 50px;
+	border: 1px solid #eee;
+	margin: 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	max-width: 250px;
+    word-break: break-all;
+	&:before{
+		content: '';
+		display: inline-block;
+		position: absolute;
+		right: -20px;
+		top: 15px;
+		border: 10px solid transparent;
+		border-left-color: @buble-color; 
+	}
+	&.bubble-right:before{
+		right: auto;
+		left: -20px;
+		border-left-color: transparent;
+		border-right-color: @buble-color; 
+	}
+}

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.md-userhead-search {
+	position: relative;
+
+	.icon-search {
+		display: inline-block;
+		.square(48px);
+		margin: 12px;
+
+		color: #fff;
+		font-size: 36px;
+		vertical-align: middle;
+	}
+	.search-input {
+		display: inline-block;
+		width: 0;
+
+		margin-left: 8px;
+		vertical-align: middle;
+
+		color: @text-color;
+		font-size: 28px;
+
+		outline: 0;
+		border: 0;
+		border-bottom: 1px solid #888;
+
+		background: transparent;
+
+		.transition;
+
+		&.searching{
+			width: 350px;
+			padding-right: 45px;
+		}
+	}
+	.cancel-btn{
+		position: absolute;
+		right: 0;
+		top: 10px;
+
+		display: none;
+		.square(45px);
+
+		vertical-align: middle;
+		
+		color: #888;
+		text-align: center;
+		font-size: 32px;
+
+		&.typing{
+			display: inline-block;
+		}
+	}
+}

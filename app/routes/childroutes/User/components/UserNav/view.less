@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.md-user-nav{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+
+	border-top: 1px solid #ccc;
+	background: #f3f3f3;
+
+	.clearfix;
+
+	.nav-link{
+		float: left;
+		.size(33%, 100px);
+
+		color: @text-color;
+		font-size: 26px;
+		line-height: 20px;
+		text-align: center;
+
+		.iconfont{
+			display: inline-block;
+			.size(100%, 60px);
+
+			font-size: 38px;
+			text-align: center;
+			line-height: 60px;
+		}
+
+		&.active{
+			color: @bg-blue;
+		}
+	}
+}

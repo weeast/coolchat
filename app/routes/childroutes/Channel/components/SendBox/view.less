@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.md-channel-sendbox{
+	position: relative;
+	.size(100%, 90px);
+	line-height: 90px;
+	padding: 5px 90px;
+	background: #d4dedf;
+    border-top: 2px solid #fff;
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    .tool-btn{
+    	font-size: 40px;
+    	font-weight: 600;
+    }
+	.tool-btn,.send-btn{
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		background-color: #fff;
+	}
+	.send-btn{
+		left: auto;
+		right: 5px;
+	}
+	.text-input{
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: -50px;
+		height: 80px;
+	}
+}

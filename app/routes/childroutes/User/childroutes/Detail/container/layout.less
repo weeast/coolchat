@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.layout-user-detail{
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	z-index: 20;
+
+	.square(100%);
+
+	background: url(~assets/images/bg.png) repeat;
+
+	.detail-title{
+		position: relative;
+
+		.size(100%, 100px);
+		padding: 20px;
+
+		background: @bg-light-blue;
+		border-bottom: 2px solid #fff;
+		.box-shadow(0 2px 6px rgba(0,0,0,0.5));
+
+		text-align: center;
+
+		h2{
+			color: @text-color;
+			font-size: 36px;
+			font-weight: 300;
+			font-family: 'Bree Serif', serif;
+			text-align: center;
+
+			.text-shadow(0px 1px 0 rgba(0,0,0,0.25));
+		}
+	}
+
+	.detail-goback{
+		position: absolute;
+		top: 25px;
+		left: 25px;
+
+		display: inline-block;
+		.square(48px);
+
+		color: #fefefe;
+		font-size: 36px;
+		text-align: center;
+		line-height: 48px;
+
+		border: 1px solid #fefefe;
+		.border-radius(5px);
+		.box-shadow(0px 1px 6px rgba(0,0,0,0.5));
+	}
+
+	.detail-wrap{
+		padding: 50px;
+	}
+
+	.md-userdetail-icon,
+	.md-userdetail-mail,
+	.md-userdetail-name,
+	.detail-password-wrap{
+		margin: 20px auto;
+	}
+
+	.detail-password-wrap{
+		text-align: center;
+	}
+}

@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@import "~_mixins.less";
+
+.md-userlist-classified{
+	background: #fefefe;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	.box-shadow(0 2px 6px rgba(0,0,0,0.5));
+
+	.title{
+		position: relative;
+
+		height: 90px;
+
+		padding: 15px 20px;
+
+		font-size: 38px;
+		color: @text-color;
+		line-height: 60px;
+
+		.icon-more{
+			position: absolute;
+			right: 20px;
+			top: 10px;
+
+			color: @text-color-maingray;
+			font-size: 48px;
+		
+			.transition;
+		}
+	}
+	
+	.list-item-repeater{
+		height: 0;
+
+		overflow: hidden;
+
+		.transition;
+	}
+
+	.list-item{
+		height: 100px;
+
+		padding: 10px 40px;
+
+		margin-top: 1px solid #ccc;
+
+		.icon{
+			.square(80px);
+
+			.border-radius(50%);
+			.box-shadow(0 1px 6px rgba(0,0,0,0.5));
+
+			margin-right: 40px;
+			vertical-align: middle;
+		}
+
+		.name{
+			display: inline-block;
+			width: 550px;
+
+			color: @text-color;
+			font-size: 32px;
+			.text-overflow;
+			vertical-align: middle;
+		}
+	}
+}
